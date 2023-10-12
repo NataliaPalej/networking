@@ -1,0 +1,60 @@
+Part 1
+Step 2:
+Q: How many Fast Ethernet interfaces does the switch have?
+A: 24
+
+Q: How many Gigabit Ethernet interfaces does the switch have?
+A: 2
+
+Q: What is the range of values shown for the vty lines?
+A: 0-15
+#
+Q: Which command will display the current contents of non-volatile random-access memory (NVRAM)?
+A: Command show startup-config
+
+Q: Why does the switch respond with “startup-config is not present?”
+A: Config is saved in RAM, not in NVRAM 
+
+Part 2
+Step 2:
+Q: Why is the login command required?
+A: Login is required for the process to work, it must have both login and password commands. If that wasn't done, we wouldn't be prompted to enter password
+
+Step 7:
+Q: What is displayed for the enable secret password?
+A: 
+enable secret 5 $1$mERr$ILwq/b7kc.7X/ejA4Aosn0
+enable password c1$c0
+
+Q: Why is the enable secret password displayed differently from what we configured?
+A: It is because we enabled secret "itsasecret" command which changes the plain password to hashed password, it is done for the security reasons
+
+Step 8:
+Q: If you configure any more passwords on the switch, will they be displayed in the configuration file as plain text or in encrypted form? Explain.
+A: As we enabled service password encryption, both should be still encrypted and shouldnt display in plain text. It should also work on any other fututre passwords, since the encryption is enabled throughout - user doesnt need to repeat the step again.
+Now the password looks like this: password 7 082D495A041C0C19
+
+Part 3
+Step 1:
+Q: When will this banner be displayed?
+A: The message will be displayed once we exit from the config mode and when user is prompted to enter password. User will see the message followed by the password prompt.
+
+Q: Why should every switch have a MOTD banner?
+A: Banner is a good idea since it gives the user idea of what he is trying to access. It is a good practise to notify the user they are entering restricted/authorized area, this also warns any users that shouldn't have access to that certain location/config.
+
+Part 4
+Step 1:
+Q: What is the shortest, abbreviated version of the copy running-config startup-config command?
+A: 
+
+Q: Examine the startup configuration file.
+A: cop r s
+
+Q: Which command will display the contents of NVRAM?
+A: show startup-config
+
+Q: Are all the changes that were entered recorded in the file?
+A: Yes
+
+
+
